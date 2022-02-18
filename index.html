@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indice de masa corporal</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://unpkg.com/vue@3"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body>
+    <div id="app">
+        <div class="container">
+            <div class=" row">
+                <div class="col-md-6">
+                    <label>Peso (kg)</label>
+                    <input type="text" name="" id="" class="form-control" placeholder="Peso" v-model="peso">
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-md-6">
+                    <label for="">Altural (cm)</label>
+                    <input type="text" name="" id="" class="form-control" placeholder="Altura" v-model="altura">
+                </div>
+            </div>
+            <br>
+            <br>
+            <div class="row">
+                <div class="col-md-6 text-center">
+                    <button type="button" class="btn btn-primary" @click="calcular">Calcular</button>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <div class="row">
+            <div class="col-md-6 text-center">
+                <label v-if="resultado">Tu indice de masa corporal es de {{resultado}}</label>
+                <br>
+                <label v-if="estado">{{estado}}</label>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
